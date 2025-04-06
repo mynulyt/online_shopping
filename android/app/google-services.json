@@ -12,7 +12,20 @@
           "package_name": "com.example.fooddeliveryapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "595630345582-gc8825t2vg5ut8f78lvhkenrul0mt8io.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fooddeliveryapp",
+            "certificate_hash": "5f85fb54ec46ff80f596d0a55fe0b78eb957b03f"
+          }
+        },
+        {
+          "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDJzdSVAXVvdgeM_3OIsUnEm8AH9lBnBBQ"
@@ -20,18 +33,43 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "595630345582-0sog0k0jeljgfa0vkqbuhll4pld73e67.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messengerApp"
+              }
+            }
+          ]
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:595630345582:android:42d678c135978c943ac57f",
+        "mobilesdk_app_id": "1:595630345582:android:0380ffe384e035933ac57f",
         "android_client_info": {
-          "package_name": "com.example.online_shopping"
+          "package_name": "com.example.messenger_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "595630345582-o0ffju4vpe70atcfj6r1g1ovce8ihju6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.messenger_app",
+            "certificate_hash": "7ebf5a4d63792fb533147e26b933db2d611898e3"
+          }
+        },
+        {
+          "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDJzdSVAXVvdgeM_3OIsUnEm8AH9lBnBBQ"
@@ -39,7 +77,99 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "595630345582-0sog0k0jeljgfa0vkqbuhll4pld73e67.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messengerApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595630345582:android:d035ae277f050a9f3ac57f",
+        "android_client_info": {
+          "package_name": "com.example.online_campus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595630345582-k8eel067ils8o8d4emo0gbnvjckqq935.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.online_campus",
+            "certificate_hash": "b1a4f26d3095cfd73ccddb4ac787830f4b3e85a9"
+          }
+        },
+        {
+          "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJzdSVAXVvdgeM_3OIsUnEm8AH9lBnBBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "595630345582-0sog0k0jeljgfa0vkqbuhll4pld73e67.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messengerApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595630345582:android:9bf3ceab0a2a53f73ac57f",
+        "android_client_info": {
+          "package_name": "com.mainul.online_eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJzdSVAXVvdgeM_3OIsUnEm8AH9lBnBBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595630345582-htuqaahdjarbmem4dhjhr6ai8ce1r58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "595630345582-0sog0k0jeljgfa0vkqbuhll4pld73e67.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messengerApp"
+              }
+            }
+          ]
         }
       }
     }
