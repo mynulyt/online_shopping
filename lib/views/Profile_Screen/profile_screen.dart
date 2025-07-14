@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
     final user = FirebaseAuth.instance.currentUser;
 
     if (user == null) {
-      return Scaffold(
+      return const Scaffold(
         body: Center(
           child: Text(
             "User not logged in",
