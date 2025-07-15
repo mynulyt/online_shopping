@@ -99,6 +99,11 @@ class EditProfieScreen extends StatelessWidget {
 
                             if (data['password'] ==
                                 controller.oldPasswordController.text) {
+                              await controller.chnageAuthPassword(
+                                  data['email'],
+                                  controller.oldPasswordController.text,
+                                  controller.newPasswordController.text);
+
                               await controller.UpdateProfile(
                                 name: controller.nameController.text,
                                 imageUrl: controller.profileImageLink,
