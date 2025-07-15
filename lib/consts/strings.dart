@@ -59,4 +59,8 @@ const video = "Video",
     supportpolicy = "Support Policy";
 
 //For details cart
-const wishList = "My Wishlist", order = "My Order", messagse = "My Messagse";
+const wishList = "My Wishlist",
+    order = "My Order",
+    messagse = "My Messagse",
+    oldpass = 'Old passdword',
+    newpass = 'New password';
