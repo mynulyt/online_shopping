@@ -15,8 +15,6 @@ class EditProfieScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var controller = Get.find<ProfileController>();
-    controller.nameController.text = data['name'];
-    controller.passController.text = data['password'];
 
     return bgWidget(
       child: Scaffold(

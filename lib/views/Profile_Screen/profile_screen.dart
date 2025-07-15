@@ -66,49 +66,59 @@ class ProfileScreen extends StatelessWidget {
                       }),
                     ),
                     // User info section
-                    Row(
-                      children: [
-                        data['imageUrl'] == ''
-                            ? Image.asset(
-                                imgProfile2,
-                                width: 70,
-                                fit: BoxFit.cover,
-                              ).box.roundedFull.clip(Clip.antiAlias).make()
-                            : Image.network(
-                                data['imageUrl'],
-                                width: 70,
-                                fit: BoxFit.cover,
-                              ).box.roundedFull.clip(Clip.antiAlias).make(),
-                        10.heightBox,
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              "${data['name']}"
-                                  .text
-                                  .fontFamily(semibold)
-                                  .color(whiteColor)
-                                  .make(),
-                              5.heightBox,
-                              "${data['email']}".text.color(whiteColor).make(),
-                            ],
-                          ),
-                        ),
-                        OutlinedButton(
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(
-                              color: whiteColor,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Row(
+                        children: [
+                          data['imageUrl'] == ''
+                              ? Image.asset(
+                                  imgProfile2,
+                                  width: 70,
+                                  fit: BoxFit.cover,
+                                ).box.roundedFull.clip(Clip.antiAlias).make()
+                              : Image.network(
+                                  data['imageUrl'],
+                                  width: 70,
+                                  fit: BoxFit.cover,
+                                ).box.roundedFull.clip(Clip.antiAlias).make(),
+                          10.heightBox,
+                          Expanded(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  "${data['name']}"
+                                      .text
+                                      .fontFamily(semibold)
+                                      .color(whiteColor)
+                                      .make(),
+                                  5.heightBox,
+                                  "${data['email']}"
+                                      .text
+                                      .color(whiteColor)
+                                      .make(),
+                                ],
+                              ),
                             ),
                           ),
-                          onPressed: () async {
-                            await Get.put(AuthController())
-                                .signoutMethod(context);
-                            Get.offAll(() => const LoginScreen());
-                          },
-                          child:
-                              "Logout".text.fontFamily(semibold).white.make(),
-                        )
-                      ],
+                          OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              side: const BorderSide(
+                                color: whiteColor,
+                              ),
+                            ),
+                            onPressed: () async {
+                              await Get.put(AuthController())
+                                  .signoutMethod(context);
+                              Get.offAll(() => const LoginScreen());
+                            },
+                            child:
+                                "Logout".text.fontFamily(semibold).white.make(),
+                          )
+                        ],
+                      ),
                     ),
                     10.heightBox,
                     // Cart, wishlist, order stats
