@@ -90,7 +90,7 @@ class EditProfieScreen extends StatelessWidget {
                             controller.isloading(true);
 
                             //if image is not selected
-                            if (controller.ProfileImagePath.value.isEmpty) {
+                            if (controller.ProfileImagePath.value.isNotEmpty) {
                               await controller.UplaodProfileImage();
                             } else {
                               controller.profileImageLink = data['imageUrl'];
