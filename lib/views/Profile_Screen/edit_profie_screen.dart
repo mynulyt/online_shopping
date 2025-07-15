@@ -28,10 +28,12 @@ class EditProfieScreen extends StatelessWidget {
 
               data['imageUrl'] == '' && controller.ProfileImagePath.isEmpty
                   ? Image.asset(
+                      //asset image is must be change
                       imgProfile2,
                       width: 70,
                       fit: BoxFit.cover,
                     ).box.roundedFull.clip(Clip.antiAlias).make()
+                  //if is data is not empty but, controller path is empty
                   : data['imageUrl'] != '' &&
                           controller.ProfileImagePath.isEmpty
                       ? Image.network(
@@ -39,6 +41,7 @@ class EditProfieScreen extends StatelessWidget {
                           width: 100,
                           fit: BoxFit.cover,
                         ).box.roundedFull.clip(Clip.antiAlias).make()
+                      //if both are empty
                       : Image.file(
                           File(controller.ProfileImagePath.value),
                           width: 100,

@@ -72,6 +72,7 @@ class ProfileScreen extends StatelessWidget {
                         children: [
                           data['imageUrl'] == ''
                               ? Image.asset(
+                                  //asset image is change later
                                   imgProfile2,
                                   width: 70,
                                   fit: BoxFit.cover,
