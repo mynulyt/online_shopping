@@ -65,7 +65,7 @@ class EditProfieScreen extends StatelessWidget {
                 isPass: false,
               ),
               CustomTextField(
-                controller: controller.passController,
+                controller: controller.oldPasswordController,
                 hint: passwordHint,
                 title: password,
                 isPass: true,
@@ -84,7 +84,7 @@ class EditProfieScreen extends StatelessWidget {
                             await controller.UpdateProfile(
                               name: controller.nameController.text,
                               imageUrl: controller.profileImageLink,
-                              password: controller.passController.text,
+                              password: controller.newPasswordController.text,
                             );
 
                             VxToast.show(context, msg: "Updated");

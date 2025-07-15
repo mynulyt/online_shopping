@@ -16,7 +16,9 @@ class ProfileController extends GetxController {
   var isloading = false.obs;
   //Text Field for Edit profile
   var nameController = TextEditingController();
-  var passController = TextEditingController();
+  var oldPasswordController = TextEditingController();
+  var newPasswordController = TextEditingController();
+
   ChangeIamge(context) async {
     try {
       final img = await ImagePicker()
