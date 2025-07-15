@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
@@ -49,5 +50,15 @@ class ProfileController extends GetxController {
       'imageUrl': imageUrl,
     }, SetOptions(merge: true));
     isloading(false);
+  }
+
+  chnageAuthPassword(email, password, newpassword) async {
+    final cred = EmailAuthProvider.credential(email: email, password: password);
+
+    await crurrentUser!.reauthenticateWithCredential(cred).then((Value) {
+      crurrentUser!.updatePassword(newpassword);
+    }).catchError((error) {
+      print(error.toString());
+    });
   }
 }
