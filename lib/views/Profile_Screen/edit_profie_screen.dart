@@ -88,14 +88,25 @@ class EditProfieScreen extends StatelessWidget {
                       child: ourButtom(
                           onPress: () async {
                             controller.isloading(true);
-                            await controller.UplaodProfileImage();
-                            await controller.UpdateProfile(
-                              name: controller.nameController.text,
-                              imageUrl: controller.profileImageLink,
-                              password: controller.newPasswordController.text,
-                            );
 
-                            VxToast.show(context, msg: "Updated");
+                            //if image is not selected
+                            if (controller.ProfileImagePath.value.isEmpty) {
+                              await controller.UplaodProfileImage();
+                            } else {
+                              controller.profileImageLink = data['imageUrl'];
+                            }
+                            //if old password matches
+
+                            if (data['password'] ==
+                                controller.oldPasswordController.text) {
+                              await controller.UpdateProfile(
+                                name: controller.nameController.text,
+                                imageUrl: controller.profileImageLink,
+                                password: controller.newPasswordController.text,
+                              );
+
+                              VxToast.show(context, msg: "Updated");
+                            }
                           },
                           color: redColor,
                           textColor: whiteColor,
