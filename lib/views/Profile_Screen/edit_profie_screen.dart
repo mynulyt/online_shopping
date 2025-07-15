@@ -106,6 +106,9 @@ class EditProfieScreen extends StatelessWidget {
                               );
 
                               VxToast.show(context, msg: "Updated");
+                            } else {
+                              VxToast.show(context, msg: "Wrong old password");
+                              controller.isloading(false);
                             }
                           },
                           color: redColor,
