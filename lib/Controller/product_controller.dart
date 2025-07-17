@@ -3,17 +3,20 @@ import 'package:get/get.dart';
 import 'package:online_shopping/Model/category_model.dart';
 
 class ProductController extends GetxController {
-  var subcat = [];
-  getSubCategories(String title) async {
+  var subcat = <String>[].obs;
+
+  Future<void> getSubCategories(String title) async {
     subcat.clear();
-    var data = await rootBundle.loadString("lib/services/category_model.json");
-    var decode = categoryModelFromJson(data);
+    final data =
+        await rootBundle.loadString("lib/services/category_model.json");
+    final decode = categoryModelFromJson(data);
 
-    var s =
-        decode.categories.where((element) => element.name == title).toList();
+    final matched = decode.categories.firstWhere(
+      (element) =>
+          element.name.toLowerCase().trim() == title.toLowerCase().trim(),
+      orElse: () => Category(name: '', subcategory: []),
+    );
 
-    for (var e in s[0].subcategory) {
-      subcat.add(e);
-    }
+    subcat.addAll(matched.subcategory);
   }
 }
