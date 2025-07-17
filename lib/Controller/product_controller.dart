@@ -5,6 +5,7 @@ import 'package:online_shopping/Model/category_model.dart';
 class ProductController extends GetxController {
   var subcat = [];
   getSubCategories(String title) async {
+    subcat.clear();
     var data = await rootBundle.loadString("lib/services/category_model.json");
     var decode = categoryModelFromJson(data);
 
