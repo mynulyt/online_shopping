@@ -19,7 +19,9 @@ class CategoriesDetails extends StatelessWidget {
           title: title!.text.fontFamily(bold).white.make(),
         ),
         body: Container(
+          padding: EdgeInsets.all(8),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),

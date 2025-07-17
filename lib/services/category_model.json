@@ -1,7 +1,7 @@
 {
     "categories": [
         {
-            "name": "Women Dress",
+            "name": "Women Clothing",
             "subcategory": [
                 "Wedding & Event",
                 "Tops & Sets",
@@ -9,7 +9,7 @@
             ]
         },
         {
-            "name": "Men Clothing & Fashion",
+            "name": "Men Clothing Fasion",
             "subcategory": [
                 "Outwear & Jackets",
                 "Formal Dress",
@@ -25,7 +25,7 @@
             ]
         },
         {
-            "name": "Automobile",
+            "name": "Auto Mobile",
             "subcategory": [
                 "Cars",
                 "Bikes",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "name": "Kids & Toys",
+            "name": "Kid & Toys",
             "subcategory": [
                 "Shoes & Bags",
                 "Baby Colthing",
@@ -49,7 +49,7 @@
             ]
         },
         {
-            "name": "Jewelry",
+            "name": "Jewelery",
             "subcategory": [
                 "Necklace",
                 "Gold",
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "name": "Cellphone & Tab",
+            "name": "cell Phone",
             "subcategory": [
                 "Smartphone",
                 "Tablets",
@@ -65,7 +65,7 @@
             ]
         },
         {
-            "name": "Furniture",
+            "name": "Funiture",
             "subcategory": [
                 "Sofa",
                 "Bed",
