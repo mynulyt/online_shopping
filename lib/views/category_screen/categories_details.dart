@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:online_shopping/Controller/product_controller.dart';
 
 import 'package:online_shopping/consts/consts.dart';
 import 'package:online_shopping/views/category_screen/item_detailes.dart';
@@ -12,8 +11,6 @@ class CategoriesDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.find<ProductController>();
-
     return bgWidget(
       child: Scaffold(
         appBar: AppBar(
@@ -27,8 +24,8 @@ class CategoriesDetails extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: List.generate(
-                      controller.subcat.length,
-                      (index) => "${controller.subcat[index]}"
+                      6,
+                      (index) => "Baby clothing"
                           .text
                           .fontFamily(semibold)
                           .size(12)

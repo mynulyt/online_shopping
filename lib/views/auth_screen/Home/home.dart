@@ -16,57 +16,60 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var controller = Get.put(HomeController());
-    var NavbarItem = [
+
+    var navBarItems = [
       BottomNavigationBarItem(
-          icon: Image.asset(
-            icHome,
-            width: 26,
-          ),
-          label: home),
+        icon: Image.asset(icHome, width: 26),
+        label: home,
+      ),
       BottomNavigationBarItem(
-          icon: Image.asset(
-            icCategories,
-            width: 26,
-          ),
-          label: topCategories),
+        icon: Image.asset(icCategories, width: 26),
+        label: topCategories,
+      ),
       BottomNavigationBarItem(
-          icon: Image.asset(
-            icCart,
-            width: 26,
-          ),
-          label: cart),
+        icon: Image.asset(icCart, width: 26),
+        label: cart,
+      ),
       BottomNavigationBarItem(
-          icon: Image.asset(
-            icProfile,
-            width: 26,
-          ),
-          label: account)
+        icon: Image.asset(icProfile, width: 26),
+        label: account,
+      ),
     ];
 
-    var NavBody = [
+    var navBody = [
       const HomeScreen(),
       const CategoryScreen(),
       const CartScreen(),
       const ProfileScreen(),
     ];
-    return Scaffold(
-      body: Column(
-        children: [
-          Obx(() => Expanded(
-              child: NavBody.elementAt(controller.currentNavIndex.value))),
-        ],
-      ),
-      bottomNavigationBar: Obx(
-        () => BottomNavigationBar(
-          currentIndex: controller.currentNavIndex.value,
-          selectedItemColor: redColor,
-          selectedLabelStyle: const TextStyle(fontFamily: semibold),
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: whiteColor,
-          items: NavbarItem,
-          onTap: (value) {
-            controller.currentNavIndex.value = value;
-          },
+
+    return WillPopScope(
+      onWillPop: () async {
+        if (controller.currentNavIndex.value != 0) {
+          controller.currentNavIndex.value = 0;
+          return false;
+        }
+        return true;
+      },
+      child: Scaffold(
+        body: Obx(
+          () => IndexedStack(
+            index: controller.currentNavIndex.value,
+            children: navBody,
+          ),
+        ),
+        bottomNavigationBar: Obx(
+          () => BottomNavigationBar(
+            currentIndex: controller.currentNavIndex.value,
+            selectedItemColor: redColor,
+            selectedLabelStyle: const TextStyle(fontFamily: semibold),
+            type: BottomNavigationBarType.fixed,
+            backgroundColor: whiteColor,
+            items: navBarItems,
+            onTap: (value) {
+              controller.currentNavIndex.value = value;
+            },
+          ),
         ),
       ),
     );

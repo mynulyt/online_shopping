@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:online_shopping/Controller/product_controller.dart';
 import 'package:online_shopping/consts/color.dart';
 import 'package:online_shopping/consts/list.dart';
 import 'package:online_shopping/consts/strings.dart';
@@ -14,7 +13,6 @@ class CategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(ProductController());
     return bgWidget(
         child: Scaffold(
       appBar: AppBar(
@@ -54,7 +52,6 @@ class CategoryScreen extends StatelessWidget {
                   .outerShadowSm
                   .make()
                   .onTap(() {
-                controller.getSubCategories(categoriesList[index]);
                 Get.to(() => CategoriesDetails(title: categoriesList[index]));
               });
             }),
